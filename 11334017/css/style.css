@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, #2c3e50 0%, #000000 100%);
+    color: white;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* nav */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #ff5722;
+}
+
+.navbar a:not(.signup):hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff5722;
+}
+
+.login {
+    transition: all 0.3s ease;
+}
+
+.login:hover {
+    color: #ff5722;
+}
+
+.signup {
+    background-color: #ff5722;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.signup:hover {
+    background-color: #ff7043;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.3);
+}
+
+.signup:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(255, 87, 34, 0.2);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* hero */
+.hero {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #aaa;
+}
+
+/* card排版*/
+.player-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* card */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    position: relative;
+    height: 300px;
+    background: #1a1a1a; 
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.jersey-number {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff5722;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.position {
+    color: #ff5722;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.team {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* 數據欄*/
+.stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.stat-item span {
+    font-size: 0.7rem;
+    color: #999;
+}
